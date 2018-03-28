@@ -1,0 +1,21 @@
+/* GLOBAL */
+.none {display: none;}
+.pointer {cursor: pointer;}
+
+/* MAIN */
+html {position: relative; min-height: 100%;}
+body {margin-bottom: 60px;}
+
+/* FOOTER */
+footer {position: absolute; bottom: 0; left: 25%; right: 0; height: 60px;}
+
+/*NAV*/
+nav:before {content:""; position: fixed; background: #343A40; top: 23px; bottom: 0; left: 0; width: 25%; z-index: -1;}
+
+/*LOGIN*/
+#loginForm {position: absolute; left: 50%; top: 50%; transform: translate3d(-50%,-50%,0);}
+#loginForm.size {transform: translate3d(0,0,0); position: relative; left: 0; top: 0; margin:0 auto;}
+
+@media (max-width: 767px){
+	nav:before {display: none;}
+}
