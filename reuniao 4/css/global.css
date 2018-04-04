@@ -1,0 +1,10 @@
+/* GLOBAL */
+.none {display: none;}
+.pointer {cursor: pointer;}
+
+/* MAIN */
+html {position: relative; min-height: 100%;}
+body {margin-bottom: 60px;}
+
+/* FOOTER */
+footer {position: absolute; bottom: 0; left: 0; right: 0; height: 60px;}
