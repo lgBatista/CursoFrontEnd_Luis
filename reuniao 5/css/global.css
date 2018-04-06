@@ -1,0 +1,7 @@
+/* MAIN */
+html {position: relative; min-height: 100%;}
+html.login {background: url(../img/bg_form.jpg) no-repeat center; background-size: cover}
+
+/*LOGIN*/
+#loginForm {position: absolute; top:50%; left:50%; transform: translate3d(-50%, -50%, 0); background-color: rgba(0,0,0,.8);}
+#loginForm.minHeight {transform: translate3d(-50%, 0, 0); top: 0}
