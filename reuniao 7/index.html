@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Site com menu vertical</title>
+
+	<!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- SELECT -->
+
+    <link rel="stylesheet" href="css/chosen.css">
+   <!--PRINCIPAL-->
+    <link rel="stylesheet" href="css/global.css">
+
+</head>
+
+<body>
+    <noscript>Os scripts necessários para o funcionamento do sistema não foram carregados</noscript>
+
+    <header>
+        <div id="loading"></div>
+    </header>
+    <main id="main">
+        <form action="#" class="w-50 mx-auto validateForm">
+          <div class="form-group">
+            <label for="crazy_cep">crazy CPF</label>
+            <input required name="crazy_cep" type="text" class="form-control crazy_cep-mask" id="crazy_cep" aria-describedby="emailHelp" placeholder="sera?">
+          </div>
+          <div class="form-group">
+            <label for="input-cpf">CPF</label>
+            <input required name="cpf" type="text" class="form-control mask-cpf" id="input-cpf" aria-describedby="emailHelp" placeholder="n osso cpf">
+          </div>
+          <div class="form-group">
+            <label for="input-nosso">input nosso address</label>
+            <input required name="nosso" type="text" class="form-control" id="input-nosso" aria-describedby="emailHelp" placeholder="n osso">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input required name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input required name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="repita">Password repita</label>
+            <input required name="password_repita" type="password" class="form-control" id="repita" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="selectExample">sELECT</label>
+            <select required name="selectExample" id="selectExample" class="chosen form-control" data-placeholder="selecione">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+          </div>
+          <div class="form-check">
+            <input required name="disciplina" type="checkbox" class="form-check-input" id="exampleCheck1" value="1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <input name="disciplina" type="checkbox" class="form-check-input" id="exampleCheck2" value="2">
+            <label class="form-check-label" for="exampleCheck2">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="alert-content mt-4">
+              <div class="alert alert-danger none">mensagem de erro</div>
+              <div class="alert alert-success none">mensagem de sucesso</div>
+          </div>
+        </form>
+    </main>
+    <footer>footer</footer>
+
+    <!--JQUERY-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- VALIDATE -->
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/apply_validate.js"></script>
+    <!-- VALIDATE -->
+    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="js/apply_chosen.js"></script>
+    <!-- MASK -->
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="js/apply_mask.js"></script>
+    <!-- GLOBAL -->
+    <script type="text/javascript" src="js/global.js"></script>
+
+</body>
+</html>

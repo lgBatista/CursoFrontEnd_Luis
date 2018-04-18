@@ -1,0 +1,21 @@
+/* GLOBAL */
+.none {display: none;}
+.pointer {cursor: pointer;}
+
+/* MAIN */
+html {position: relative; min-height: 100%;}
+body {margin-bottom: 60px;}
+
+/* FOOTER */
+footer {position: absolute; bottom: 0; left: 0; right: 0; height: 60px;}
+
+/*ERROR*/
+label.error {color: #F00; font-size: .9rem; font-style: italic}
+.chosen-default.error,
+.form-control.error {border-color:#f00;}
+
+/*FORM*/
+select {display: block !important; visibility: hidden; position: absolute; left: -999%;}
+
+/*LOADING*/
+#loading {background: rgba(0,0,0,.5); position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 999; display: none;}
