@@ -1,0 +1,6 @@
+/* GLOBAL */
+.none {display: none;}
+.pointer {cursor: pointer;}
+
+/* MAIN */
+html {position: relative; min-height: 100%;}
