@@ -1,0 +1,12 @@
+OBJETIVO:
+Replicar a estrutura explicitada na imagem 'modelo.png' em front-end.
+
+PARTICULARIDADES:
+* resolução mínima de exibição: 320px
+* resolução máxima de exibição: 1300px
+* função de 'toggle' nos elementos 'toggle item'
+* nuances como tipo, tamanho e cores de fonte, cores de fundo, podem ser adaptadas a vontade
+
+RESTRIÇÕES:
+* uso minimo e pontual do google.
+* liberado APENAS o uso de bootstrap, css e html (uso JS apenas no evento de 'toggle', nenhuma imagem pode ser utilizada).
