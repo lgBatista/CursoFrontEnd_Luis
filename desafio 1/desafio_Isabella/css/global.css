@@ -1,0 +1,19 @@
+/* MAIN */
+html {position: relative; min-height: 100%;}
+
+/*CONTEUDO*/
+.container {max-width: 1300px;}
+
+.planos {color:#FFF;}
+.planos div {height: 170px;}
+
+.basico {background: #F00;}
+.especializado {background: #000;}
+.alertaDiabetes {background: #0FF;}
+
+.item .toggleNext {height: 40px;}
+
+.item .my-3 {border-bottom: 1px solid #CCC;}
+
+.item .conteudo {background: #eee;}
+.pointer {cursor: pointer;}
