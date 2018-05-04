@@ -1,0 +1,121 @@
+// IMPORTAÇÕES  
+@import "mixins.scss", "../css/fontawesome-all.min.css"; 
+  
+// GLOBAL
+.none {
+	display: none;
+}
+.pointer {
+	cursor: pointer;
+}
+
+// FONTS
+@include newFont ('simplon_oiheadline','simplonoi-headline-webfont');
+@include newFont ('simplon_bpmedium','simplonbp-medium-webfont');
+
+.text-title {
+	@include apply_font('simplon_oiheadline');
+}
+.medium {
+	@include apply_font('simplon_bpmedium');
+} 
+
+// BG
+.bg-gradientDown {
+	background-image: linear-gradient(-40deg, #02CFFC 0%, #00ab38 100%);
+}
+
+// BTN
+.btn { 
+	padding: .6rem 2rem; border-radius:2px; color:#FFF;
+	
+	&.btn-yellow {
+		background: #FFD701; @include apply_font('simplon_bpmedium'); color: #4D4D4D; border:0 none;
+		&:hover {
+			background: darken(#FFD701, 5%); color:#4D4D4D;
+		}
+	}
+	&.focus,
+	&:focus {
+		box-shadow: 0 0 0 0 transparent;
+	}
+}  
+
+// TOGGLE ITEM
+.toggleItem-default {
+	.toggleItem {
+		padding: 1rem .5rem !important; border-bottom: 1px solid #CCC; display: flex; align-items: end;
+		i {
+			color: #CCC; margin-left: auto !important; 
+		}
+	}
+	.toggle-text {
+		margin-right: 5px; font-size: 1.1rem;
+	}
+}  
+
+.toggleItem {
+	&.active {
+		.fa-chevron-down:before { 
+			content: "\f077";
+		}
+	}
+}
+
+/*PRICE BOX*/
+.price-box{
+	div{
+	 	float: left; color: #4D4D4D; 
+	 	span{
+			display: block;
+			&.big-number{
+				font-size: 6rem; line-height: 75px; margin-left: .5rem; margin-right: .5rem;
+			}
+			&.periodicity{
+				font-size: 1.5rem;
+			}
+			&.currency{
+				font-size:3rem;line-height: 50px;
+			}
+			&.small-number {
+				font-size: 3rem; line-height: 38px;
+			}
+			&.generic-text {
+				margin-top: -5px; margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+// PLANOS
+#plans-container{
+	.card {
+		border-color:#f1f1f1; margin-top: -1px;
+	}
+	.row {
+		>div:nth-child(2) {
+			border: solid #f1f1f1; border-width: 0 1px;
+		}
+	}
+	.btn {
+		padding: .375rem 0;
+	}
+
+	.toggleItem {
+		padding: 0 .5rem; min-height: 60px; align-items:center;
+		.toggle-text {
+			line-height: 20px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.card-group{
+			&:after {
+		 		content:''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background-image: linear-gradient(-40deg, #02CFFC 0%, #00ab38 100%);
+			}
+			&:before {
+				content:''; position: absolute; left: 15px; right: 15px; bottom: 0px; box-shadow: 0 8px 10px 0 #585858; height: 20px; border-radius: 50%;
+			}
+		}
+	}
+}

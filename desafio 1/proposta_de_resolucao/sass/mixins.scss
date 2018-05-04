@@ -1,0 +1,16 @@
+// ADICIONAR FONTE
+@mixin newFont($name, $file){
+	@font-face {
+	    font-family: $name;
+	    src: url('../webfonts/'+$file+'.woff2') format('woff2'),
+	         url('../webfonts/'+$file+'.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+}
+
+// APLICAR FONTE
+@mixin apply_font($name){
+	font-family: $name, sans-serif; 
+	font-weight: normal;
+}
