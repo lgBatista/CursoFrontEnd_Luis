@@ -2,14 +2,61 @@
 html {position: relative; min-height: 100%;}
 
 /*CONTEUDO*/
-.container {max-width: 1300px;}
+.container {
+	max-width: 1300px; 
+	padding-top: 50px;
+}
 
-.planos {color:#FFF;}
-.planos div {height: 170px;}
+.especializado {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
 
-.basico {background: #F00;}
-.especializado {background: #000;}
-.alertaDiabetes {background: #0FF;}
+.planos {
+	background: linear-gradient(to right, rgba(0,174,74, 1), rgba(2,205,239,1));
+    height: 210px;
+    font-family: monospace;
+    font-size: 37px;
+    width: 100%;
+    margin-left: 0%;
+}
+
+.planoTitle {
+	color: #fff;
+    font-weight: bolder;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+.price {
+	color: #4c4e4d;
+    font-family: Arial, sans-serif;
+    margin-left: 20%;
+}
+
+.tinyTitle{
+	font-size: 20px;
+    margin-right: 2%;}
+
+.bigTitle {
+	font-size: 63px;
+    position: absolute;
+    left: 23%;
+    bottom: 6%;
+}
+
+.numberTitle {
+	position: absolute;
+    font-size: 115px;
+    top: 25%;
+}
+
+.dayTitle {
+	position: absolute;
+    left: 99%;
+    top: 19%;
+    font-size: 35px;
+}
 
 .item .toggleNext {height: 40px;}
 
