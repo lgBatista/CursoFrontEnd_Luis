@@ -1,0 +1,20 @@
+@import url(../css/fontawesome-all.min.css);
+
+/* GLOBAL */
+.none {display: none;}
+.pointer {cursor: pointer;}
+
+/* MAIN */
+html {position: relative; min-height: 100%;}
+.container {max-width: 1200px;}
+
+/*THUMB VIDEO*/
+ul {list-style: none;}
+li {cursor: pointer;}
+iframe {border:0 none; width: 100%; height: 400px;}
+.video-list {max-height: 400px; overflow-y: auto; border:1px solid #DDD;}
+.video-list li div.col:first-child{position: relative;}
+.video-list li div.col:first-child:before{content:"\f167"; font-family: "Font Awesome 5 Brands"; position: absolute; left: 50%; top: 50%; font-size: 2rem; transform: translate3d(-50%, -50%, 0); }
+
+#main-video div {overflow-y: hidden;}
+#main-video div.min {height: 80px;}
