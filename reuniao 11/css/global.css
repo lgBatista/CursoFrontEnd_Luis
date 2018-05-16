@@ -1,0 +1,25 @@
+@import url(../css/fontawesome-all.min.css);
+
+/* GLOBAL */
+.none {display: none;}
+.pointer {cursor: pointer;}
+
+/* MAIN */
+html {position: relative; min-height: 100%;}
+.container {max-width: 1200px;}
+
+/*THUMB VIDEO*/
+ul {list-style: none;}
+li {cursor: pointer;}
+iframe {border:0 none; width: 100%; height: 400px;}
+.video-list {max-height: 400px; overflow-y: auto; border:1px solid #DDD;}
+.video-list li div.col:first-child{position: relative;}
+.video-list li div.col:first-child:before{content:"\f04b"; font-weight: 900; font-family: "Font Awesome 5 Free"; position: absolute; left: 50%; top: 50%; font-size: .8em; transform: translate3d(-50%, -50%, 0); color: #FFF; width: 45px; height: 31px; background: rgba(0,0,0, .6); padding: 7px 18px; border-radius: 9px / 12px; transition: all .2s ease; line-height: 17px;}
+.video-list li div.col:hover:first-child:before{transform: translate3d(-50%, -50%, 0) scale(1.1); background: #F00;}
+
+#main-video div {overflow-y: hidden; line-height: 26px;}
+#main-video div.min {height: 80px;}
+
+@media (max-width: 767px){
+	.video-list {max-height: 375px;}
+}
