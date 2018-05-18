@@ -1,0 +1,16 @@
+OBJETIVO:
+Estilizar a visualização do video local que foi gerado na reunião 12 (https://github.com/lgBatista/CursoFrontEnd_Luis/tree/master/reuniao%2012)
+
+PARTICULARIDADES:
+* deve ser responsivo
+* 3 funcionalidades requeridas:
+	- play no centro da tela
+	- play / pause no canto inferior da tela
+	- botão de fullscreen
+* funcionalidades desejadas:
+	- controle de tempo
+	- controle de volume
+	- mutar audio
+
+RESTRIÇÕES:
+* não pode haver uso de plugins que estilizem o video, porem o uso de plugins de componentes separados está liberado (exemplo: slider para tempo / volume)
