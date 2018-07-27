@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<meta charset="utf-8">
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+</body>
+
+<script>
+		
+	var arr = [0,1,2,3,4,5],	
+		tipo = 'noticia',
+		item = ['item 1','item 2'],
+		arr_dois = arr.map(item => ` value ${item == 0 ? item+50 : item*2}`),
+		html = `
+			parte fixa de cima
+			${item.map(elm => setType (tipo, elm) ).join('')}
+			parte fixa de baixo
+		`;
+
+	function setType (tipo, elm){
+		return tipo == 'aviso' ? ` aaaaaaaaaa <span class="aviso">${elm}</span>` : 
+			   tipo == 'lixeira' ? ` bbbbbbb <span class="lixeira">${elm}</span>` :
+			   tipo == 'noticia' ? ` ccccccc <span class="noticia">${elm}</span>` :
+		`<span>${elm}</span>`
+	}
+
+	console.log(html);
+
+</script>
+</html>
