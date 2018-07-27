@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<meta charset="utf-8">
+<html>
+<head>
+	<title>Desafio 3 - refatoração e otimização de código</title>
+</head>
+
+<style>
+	ol {margin-bottom: 30px; background: #EEE;}
+</style>
+<body>
+	<div id="info">
+		Os detalhes do desafio são:
+		<ol>
+			<li>Não usar jQuery</li>
+			<li>A referencia do resultado final está no git no arquivo ref_desafio.png</li>
+			<li>Fazer tudo (CSS e JS) dentro do index.html</li>
+			<li>A página já está fazendo a requisição JSON com o retorno no parametro 'json' só utilizar</li>
+			<li>deve-se observar como cada tipo é tratado na imagem de referencia e popular o resultado final na div#lista</li>
+		</ol>
+	</div>
+	<!-- CONTEUDO DA LISTA -->
+	<div id="lista"></div>
+</body>
+
+<script>
+	// GET JSON
+	fetch('lista.json').then(json => json.json()).then(function(json) {
+		console.log(json);
+	})
+</script>
+
+</html>
