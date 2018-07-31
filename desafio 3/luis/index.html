@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+	<meta charset="utf-8">
+<html>
+<head>
+	<title>Desafio 3 - refatoração e otimização de código</title>
+</head>
+
+<!-- icones -->
+<link rel="stylesheet" href="css/all.min.css">
+
+<style>
+	/*DEFAULT*/
+	ol {margin-bottom: 30px; background: #EEE;}
+
+	/*DESAFIO*/
+	body {font-family: sans-serif; color: #333;}
+	ul {list-style: none; padding: 0;}
+	ul li {display: flex; border-top: 1px solid #666; padding: 15px 0;}
+	ul li img{width: 150px; margin-right: 15px; align-self: baseline;}
+	ul li:first-child {border-top: 0 none;}
+	p {margin-top: 0;}
+	.info {margin-right: 15px; padding-right: 15px; border-right: 1px dotted #999; flex:0 0 auto;}
+	.info div {margin-top: 5px;}
+	.info div:first-child {margin-top: 0;}
+	.info i{color: #165ABF;}
+	.desc a{margin-bottom: 5px; display: inline-block; text-decoration: none; font-weight: bold; color: #000;}
+	.desc a:hover{color: #165ABF;}
+	.periodo {display: inline-flex; flex-direction: column; align-items: center;}
+</style>
+<body>
+	<!-- INFO DO DESAFIO -->
+	<div id="info">
+		Os detalhes do desafio são:
+		<ol>
+			<li>Não usar jQuery</li>
+			<li>A referencia do resultado final está no git no arquivo ref_desafio.png</li>
+			<li>Fazer tudo (CSS e JS) dentro do index.html</li>
+			<li>A página já está fazendo a requisição JSON com o retorno no parametro 'json' só utilizar</li>
+			<li>deve-se observar como cada tipo é tratado na imagem de referencia e popular o resultado final na div#lista</li>
+		</ol>
+	</div>
+	<!-- CONTEUDO DA LISTA -->
+	<ul id="lista"></ul>
+</body>
+
+<script>
+	// GET JSON
+	fetch('lista.json').then(json => json.json()).then(function(json) {
+
+		let html = json.map(elem =>
+			`
+				<li>
+					<div class="info">
+						${elem.data ? `<div><i class="fas fa-calendar-alt"></i> <span>${elem.data}</span></div>` : ''}
+						${elem.hora ? `<div><i class="far fa-clock"></i> <span>${elem.hora}</span></div>` : ''}
+						${elem.tipo ? setIcon(elem.tipo) : ''}
+					</div>
+					${elem.thumb ? `<img src="${elem.thumb}" alt="Thumb da Notícia" />` : ''}
+					<div class="desc">
+						<a href="#" title="ir para">${elem.titulo}</a>
+						${elem.descricao}
+					</div>
+				</li>
+			`
+		).join('');
+
+		lista.innerHTML = html;
+
+	});
+
+	function setIcon (type){
+		let icon = type == 'Áudio' ? '<i class="fas fa-volume-up"></i>' :
+				   type == 'Página' ? '<i class="fas fa-file"></i>' :
+				   type == 'Vídeo' ? '<i class="fas fa-video"></i>' :
+				   type == 'Infográfico' ? '<i class="fas fa-chart-pie"></i>' :
+				   type == 'Galeria' ? '<i class="far fa-images"></i>' :
+				   type == 'Texto' ? '<i class="fas fa-align-left"></i>' :
+				   type == 'Foto' ? '<i class="far fa-image"></i>' : '<i class="fas fa-mobile-alt"></i>';
+
+		return `<div> ${icon} <span>${type}</span></div>`
+	}
+</script>
+
+</html>
